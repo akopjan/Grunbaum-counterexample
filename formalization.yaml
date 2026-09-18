@@ -5,7 +5,7 @@ project:
   name: "A convex body variant of Soberon's counterexample to the Grünbaum conjecture."
   description: >-
     A Lean formalization of a geometric strengthening/variant of Pablo
-    Soberón's four-hyperplane mass-partition counterexample in dimension four.
+    Soberón's four-hyperplane mass-partition counterexample to the Grünbaum conjecture.
     The formalized result constructs a convex body K in R^4 with nonempty
     interior such that no four affine hyperplanes divide K into sixteen sign
     cells of equal four-dimensional volume.  Equivalently, the obstructed mass
