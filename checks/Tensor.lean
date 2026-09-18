@@ -1,0 +1,5 @@
+import SoberonConvexBody.Tensors
+
+#print axioms SoberonConvexBody.Tensors.zero_can_be_reframed_to_standard
+#print axioms SoberonConvexBody.Tensors.obstruction_ne_zero_near_standard
+#print axioms SoberonConvexBody.Tensors.exists_tau_obstruction_nonzero

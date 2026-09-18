@@ -1,0 +1,345 @@
+{
+  "audit_type": "static text and local import graph only",
+  "kernel_checked": false,
+  "elaboration_checked": false,
+  "counts": {
+    "sorry": 0,
+    "axiom": 0,
+    "admit": 0,
+    "sorryAx": 0,
+    "unsafe": 0,
+    "native_decide": 0
+  },
+  "findings": [],
+  "errors": [],
+  "dependency_order": [
+    "SoberonConvexBody.Walsh4",
+    "SoberonConvexBody.Cells",
+    "SoberonConvexBody.TensorDefs",
+    "SoberonConvexBody.TensorMultilinear",
+    "SoberonConvexBody.TensorParity",
+    "SoberonConvexBody.FrameBasics",
+    "SoberonConvexBody.TensorZeroAlgebra",
+    "SoberonConvexBody.TensorLocal",
+    "SoberonConvexBody.TensorZeroClassification",
+    "SoberonConvexBody.Tensors",
+    "SoberonConvexBody.SphereMeasure",
+    "SoberonConvexBody.SphereParity",
+    "SoberonConvexBody.FrameGeometry",
+    "SoberonConvexBody.GeometryCore",
+    "SoberonConvexBody.SphereBounds",
+    "SoberonConvexBody.ShellBounds",
+    "SoberonConvexBody.ShellStability",
+    "SoberonConvexBody.NearIdentity",
+    "SoberonConvexBody.EllipsoidScalar",
+    "SoberonConvexBody.SphereQuadratic",
+    "SoberonConvexBody.EllipsoidExpansion",
+    "SoberonConvexBody.PolarGeneral",
+    "SoberonConvexBody.AffineBall",
+    "SoberonConvexBody.BallLocal",
+    "SoberonConvexBody.BallReflection",
+    "SoberonConvexBody.BallCompactness",
+    "SoberonConvexBody.QuantitativeFrame",
+    "SoberonConvexBody.BallLocalization",
+    "SoberonConvexBody.Stability",
+    "SoberonConvexBody.RadialLocalization",
+    "SoberonConvexBody.Geometry",
+    "SoberonConvexBody.WulffComparison",
+    "SoberonConvexBody.WulffVolume",
+    "SoberonConvexBody.RadialComparison",
+    "SoberonConvexBody.SupportExpansion",
+    "SoberonConvexBody.Main",
+    "SoberonConvexBody",
+    "SoberonConvexBody.ComparatorBridge",
+    "Solution"
+  ],
+  "sources": {
+    "SoberonConvexBody/AffineBall.lean": {
+      "sha256": "299e5baf87585a0ce7f13f9fcf52e9ab633ecbedc84248ffeab4b238d8ef2d0e",
+      "lines": 189,
+      "local_imports": [
+        "SoberonConvexBody.EllipsoidExpansion",
+        "SoberonConvexBody.PolarGeneral"
+      ]
+    },
+    "SoberonConvexBody/BallCompactness.lean": {
+      "sha256": "d161fca773a4402cc6eae9dd5a4d1cce2f17294e9f0b148af0222fcc6ed46b8f",
+      "lines": 270,
+      "local_imports": [
+        "SoberonConvexBody.BallReflection"
+      ]
+    },
+    "SoberonConvexBody/BallLocal.lean": {
+      "sha256": "08d6807afee20517d24121a05a9a7c5f63408e2dade7e264b622c52b5be92898",
+      "lines": 183,
+      "local_imports": [
+        "SoberonConvexBody.AffineBall",
+        "SoberonConvexBody.ShellStability"
+      ]
+    },
+    "SoberonConvexBody/BallLocalization.lean": {
+      "sha256": "b1b4f224a7ff74c62d7e76d1ef7d802e68e277d2d582671a65e1cb73358c6386",
+      "lines": 157,
+      "local_imports": [
+        "SoberonConvexBody.BallCompactness",
+        "SoberonConvexBody.QuantitativeFrame"
+      ]
+    },
+    "SoberonConvexBody/BallReflection.lean": {
+      "sha256": "fc64922268e51793704a58aea5a0e2c7ed0d1afccb3ec2cdc70c007a5b0eab19",
+      "lines": 387,
+      "local_imports": [
+        "SoberonConvexBody.BallLocal"
+      ]
+    },
+    "SoberonConvexBody/Cells.lean": {
+      "sha256": "db455b104034d72e0e6edbbd2184aea98bcfc70f657a902c2ce3ff6e8a9ed14a",
+      "lines": 152,
+      "local_imports": [
+        "SoberonConvexBody.Walsh4"
+      ]
+    },
+    "SoberonConvexBody/ComparatorBridge.lean": {
+      "sha256": "f54d3ffa1abbef3e4441a21bc37fc66faa47af29394664b33000ab813e317de3",
+      "lines": 180,
+      "local_imports": [
+        "SoberonConvexBody.Main"
+      ]
+    },
+    "SoberonConvexBody/EllipsoidExpansion.lean": {
+      "sha256": "c81fbb31fbd1bb3d106c0d6c7472440372ba6b354b47c6a9e0398fdfdebe8250",
+      "lines": 227,
+      "local_imports": [
+        "SoberonConvexBody.NearIdentity",
+        "SoberonConvexBody.EllipsoidScalar",
+        "SoberonConvexBody.SphereQuadratic"
+      ]
+    },
+    "SoberonConvexBody/EllipsoidScalar.lean": {
+      "sha256": "9e3e13f6f8dd0a3e8213444c6c0af7e72e58b5883491bb2c4845bedd26cd794d",
+      "lines": 166,
+      "local_imports": []
+    },
+    "SoberonConvexBody/FrameBasics.lean": {
+      "sha256": "c7c2f63228addd248708d6d4fbc486b74c1fb4b07dfbdd00aaf74040cccfc10e",
+      "lines": 48,
+      "local_imports": [
+        "SoberonConvexBody.TensorParity"
+      ]
+    },
+    "SoberonConvexBody/FrameGeometry.lean": {
+      "sha256": "7b7dbcfed2be9fa9c56e0cab575d61fa5239e70d281c818902f32b8f8862e83b",
+      "lines": 154,
+      "local_imports": [
+        "SoberonConvexBody.FrameBasics",
+        "SoberonConvexBody.SphereParity",
+        "SoberonConvexBody.Cells"
+      ]
+    },
+    "SoberonConvexBody/Geometry.lean": {
+      "sha256": "6af5c1c3fbde5df1be3702f8b391069e825ce35bf8e7f8c18a0e838d84daba3d",
+      "lines": 242,
+      "local_imports": [
+        "SoberonConvexBody.GeometryCore",
+        "SoberonConvexBody.ShellStability",
+        "SoberonConvexBody.RadialLocalization"
+      ]
+    },
+    "SoberonConvexBody/GeometryCore.lean": {
+      "sha256": "55bff68c92df2337bb897e7ab5e4992b6f4cc75bd086c5f48da7aaff106cc1b6",
+      "lines": 693,
+      "local_imports": [
+        "SoberonConvexBody.Walsh4",
+        "SoberonConvexBody.Cells",
+        "SoberonConvexBody.Tensors",
+        "SoberonConvexBody.FrameGeometry"
+      ]
+    },
+    "SoberonConvexBody/Main.lean": {
+      "sha256": "76f95b875eddab14b64391616db3990fdf08ca50cabcb715ef73a21b4fd85a1c",
+      "lines": 137,
+      "local_imports": [
+        "SoberonConvexBody.SupportExpansion",
+        "SoberonConvexBody.Cells"
+      ]
+    },
+    "SoberonConvexBody/NearIdentity.lean": {
+      "sha256": "a96d546706f61a2ba9331a0a439ec091b1567794fcd9512a3719a59f272842b0",
+      "lines": 168,
+      "local_imports": [
+        "SoberonConvexBody.FrameBasics"
+      ]
+    },
+    "SoberonConvexBody/PolarGeneral.lean": {
+      "sha256": "a43922cb1945ed5918d735e4a06b41ad12bd2a27fc5ca16168a29922d46a2af5",
+      "lines": 86,
+      "local_imports": [
+        "SoberonConvexBody.GeometryCore"
+      ]
+    },
+    "SoberonConvexBody/QuantitativeFrame.lean": {
+      "sha256": "527e95603318f9de5b5334b0ad713d0c617c1c3a9c3ec7fa8be92248516d4f93",
+      "lines": 180,
+      "local_imports": [
+        "SoberonConvexBody.FrameBasics"
+      ]
+    },
+    "SoberonConvexBody/RadialComparison.lean": {
+      "sha256": "a12afee10d3d411bc380b0f4ebe96632ba0ad6204e6d22392da8dad868387325",
+      "lines": 515,
+      "local_imports": [
+        "SoberonConvexBody.WulffVolume"
+      ]
+    },
+    "SoberonConvexBody/RadialLocalization.lean": {
+      "sha256": "1cabd4640d3f5afd5e70bba5735ea2c892576080701dcfe5122f22b61b660a8d",
+      "lines": 119,
+      "local_imports": [
+        "SoberonConvexBody.BallLocalization",
+        "SoberonConvexBody.Stability"
+      ]
+    },
+    "SoberonConvexBody/ShellBounds.lean": {
+      "sha256": "14ceccadfcce7b7beabae9b8d48513fa1ab9e1ea7050169d7dc60b559a57922d",
+      "lines": 238,
+      "local_imports": [
+        "SoberonConvexBody.GeometryCore",
+        "SoberonConvexBody.SphereBounds"
+      ]
+    },
+    "SoberonConvexBody/ShellStability.lean": {
+      "sha256": "9446ed332d1aa3c07d138ad2677770fec3a68b19c72e9cec881ebe33120d68ae",
+      "lines": 274,
+      "local_imports": [
+        "SoberonConvexBody.ShellBounds"
+      ]
+    },
+    "SoberonConvexBody/SphereBounds.lean": {
+      "sha256": "2e7efe689b8848cdc9e80c73105fe7295a4ee3f1f3c1c4be2d2873704d409873",
+      "lines": 155,
+      "local_imports": [
+        "SoberonConvexBody.SphereMeasure",
+        "SoberonConvexBody.FrameBasics"
+      ]
+    },
+    "SoberonConvexBody/SphereMeasure.lean": {
+      "sha256": "e55b3f193b2d84fdda47317deeee4a2f6026884830d900ed67d5d684fb921d05",
+      "lines": 269,
+      "local_imports": [
+        "SoberonConvexBody.TensorDefs"
+      ]
+    },
+    "SoberonConvexBody/SphereParity.lean": {
+      "sha256": "6fbeef1b76ad46c07ed1cbaf64a3eabcf33e8da90f2c478f3b608e947b0b6901",
+      "lines": 479,
+      "local_imports": [
+        "SoberonConvexBody.SphereMeasure",
+        "SoberonConvexBody.TensorParity",
+        "SoberonConvexBody.Walsh4"
+      ]
+    },
+    "SoberonConvexBody/SphereQuadratic.lean": {
+      "sha256": "17f833268bf6ac4d02394725e349edad793d84adac7f05b61158e6b7a0679fad",
+      "lines": 251,
+      "local_imports": [
+        "SoberonConvexBody.SphereParity"
+      ]
+    },
+    "SoberonConvexBody/Stability.lean": {
+      "sha256": "5c004d711b432799e5574f133e3bfc1340611cd2655319494341492d1588be0c",
+      "lines": 132,
+      "local_imports": [
+        "SoberonConvexBody.GeometryCore"
+      ]
+    },
+    "SoberonConvexBody/SupportExpansion.lean": {
+      "sha256": "c719b9e3b8c5f1c1bc6797868d2a6bf9e48603817ac8746d05d4ba4d833b6db7",
+      "lines": 88,
+      "local_imports": [
+        "SoberonConvexBody.RadialComparison"
+      ]
+    },
+    "SoberonConvexBody/TensorDefs.lean": {
+      "sha256": "8ca11888c3055b40bd057a4601eb1bef83cdeb4b77e80341b3db374c462d4a46",
+      "lines": 137,
+      "local_imports": []
+    },
+    "SoberonConvexBody/TensorLocal.lean": {
+      "sha256": "88da36bd710735704a996ad7fe629c136949ed154896f2e0ba7531f467ec1c1f",
+      "lines": 194,
+      "local_imports": [
+        "SoberonConvexBody.TensorZeroAlgebra"
+      ]
+    },
+    "SoberonConvexBody/TensorMultilinear.lean": {
+      "sha256": "e8314decdfcf76df3f79ca893ed1f9da27b407ff75289d5fc74f021d36fcb673",
+      "lines": 107,
+      "local_imports": [
+        "SoberonConvexBody.TensorDefs"
+      ]
+    },
+    "SoberonConvexBody/TensorParity.lean": {
+      "sha256": "1c11b4df10c65599c88d53452a1a9e75dcf0b3b1212471f0c9b608aef25292f8",
+      "lines": 104,
+      "local_imports": [
+        "SoberonConvexBody.TensorMultilinear"
+      ]
+    },
+    "SoberonConvexBody/TensorZeroAlgebra.lean": {
+      "sha256": "496085d866aadf0e2246b746bddb6a9dad6d49bb8e37a9bc1b3b2c9c5f4be886",
+      "lines": 229,
+      "local_imports": [
+        "SoberonConvexBody.TensorDefs"
+      ]
+    },
+    "SoberonConvexBody/TensorZeroClassification.lean": {
+      "sha256": "d7d3812898fb6ea047542fad416dd6cae2f144c188854a2da02ca86283ef8672",
+      "lines": 550,
+      "local_imports": [
+        "SoberonConvexBody.FrameBasics",
+        "SoberonConvexBody.TensorLocal"
+      ]
+    },
+    "SoberonConvexBody/Tensors.lean": {
+      "sha256": "5685522a6469a8859aa867650fc51648c8f663279927e4084e11fb3fd733df7a",
+      "lines": 128,
+      "local_imports": [
+        "SoberonConvexBody.TensorZeroClassification"
+      ]
+    },
+    "SoberonConvexBody/Walsh4.lean": {
+      "sha256": "6820e8f2e2e757b11d8a6bf364d2d13736408669786d007d62b4251ff8e533b5",
+      "lines": 158,
+      "local_imports": []
+    },
+    "SoberonConvexBody/WulffComparison.lean": {
+      "sha256": "8b22461a2145c55635f12c88b1b4e4d1f653531356736a897ae320b36584972e",
+      "lines": 249,
+      "local_imports": [
+        "SoberonConvexBody.Geometry"
+      ]
+    },
+    "SoberonConvexBody/WulffVolume.lean": {
+      "sha256": "e0ec2513d92fafd6ab61fa9c097c358c62440b863911a7625ca6221b41697f66",
+      "lines": 333,
+      "local_imports": [
+        "SoberonConvexBody.WulffComparison",
+        "SoberonConvexBody.Stability"
+      ]
+    },
+    "SoberonConvexBody.lean": {
+      "sha256": "6171ecfb4f9e0ceae231b4820b32096bd51341db282336d174a48f563aba8590",
+      "lines": 1,
+      "local_imports": [
+        "SoberonConvexBody.Main"
+      ]
+    },
+    "Solution.lean": {
+      "sha256": "93df282ba930a34da52cca2bbdd77a2b051e8f5c7148a7643d16263194460f99",
+      "lines": 34,
+      "local_imports": [
+        "SoberonConvexBody.ComparatorBridge"
+      ]
+    }
+  }
+}

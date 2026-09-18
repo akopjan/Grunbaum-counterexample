@@ -1,0 +1,5 @@
+import SoberonConvexBody.Geometry
+
+#print axioms SoberonConvexBody.low_walsh_localization_robust
+#print axioms SoberonConvexBody.ball_high_quadratic_flatness
+#print axioms SoberonConvexBody.radial_shell_stability

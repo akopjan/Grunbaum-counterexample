@@ -1,0 +1,4 @@
+import SoberonConvexBody.Main
+
+#print SoberonConvexBody.exists_convex_body_counterexample
+#print axioms SoberonConvexBody.exists_convex_body_counterexample

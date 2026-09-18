@@ -1,0 +1,14 @@
+{
+  "audit_rc": 0,
+  "build_rc": 0,
+  "grep_rc": 1,
+  "core_rc": 0,
+  "centered_rc": 0,
+  "tensor_rc": 0,
+  "analytic_rc": 0,
+  "main_rc": 0,
+  "grunbaum_rc": 0,
+  "axioms_rc": 0,
+  "fully_verified": true,
+  "exit_125_means": "not run because a prerequisite failed"
+}

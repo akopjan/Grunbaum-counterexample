@@ -1,0 +1,30 @@
+name = "soberon_convex_body"
+version = "0.1.0"
+defaultTargets = ["SoberonConvexBody", "Challenge", "Solution"]
+
+[[lean_lib]]
+name = "SoberonConvexBody"
+moreLeanArgs = [
+  "-Dlinter.deprecated=false",
+  "-Dlinter.unusedVariables=false",
+  "-Dweak.linter.unusedSimpArgs=false",
+  "-Dweak.linter.unusedTactic=false",
+  "-Dweak.linter.unreachableTactic=false",
+  "-Dweak.linter.unnecessarySimpa=false",
+  "-Dweak.linter.unnecessarySeqFocus=false",
+  "-Dweak.linter.seqFocus=false",
+  "-Dweak.linter.style.haveILetI=false"
+]
+
+[[lean_lib]]
+name = "Challenge"
+roots = ["Challenge"]
+
+[[lean_lib]]
+name = "Solution"
+roots = ["Solution"]
+
+[[require]]
+name = "mathlib"
+git = "https://github.com/leanprover-community/mathlib4.git"
+rev = "141f6b6455959bfeb0b2a6b04118031191d62683"

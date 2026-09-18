@@ -1,0 +1,5 @@
+import SoberonConvexBody.Geometry
+
+#print axioms SoberonConvexBody.radial_integral_formula
+#print axioms SoberonConvexBody.highScale_pos
+#print axioms SoberonConvexBody.highWalsh_centered_onFrame

@@ -1,0 +1,9 @@
+import SoberonConvexBody.FrameGeometry
+import SoberonConvexBody.TensorZeroAlgebra
+
+#print axioms SoberonConvexBody.Tensors.signAverage4_high123
+#print axioms SoberonConvexBody.Tensors.signAverage4_high0123
+#print axioms SoberonConvexBody.SphereGeometry.coordinateMoment_pos
+#print axioms SoberonConvexBody.SphereGeometry.sphereMap_measurePreserving
+#print axioms SoberonConvexBody.SphereGeometry.integral_centered_polynomial_high123
+#print axioms SoberonConvexBody.SphereGeometry.integral_centered_polynomial_high0123

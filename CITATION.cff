@@ -1,0 +1,20 @@
+cff-version: 1.2.0
+message: "If you use this formalization, please cite this repository and Pablo Soberón's source paper."
+title: "A convex-body four-hyperplane counterexample in R^4"
+type: software
+authors:
+  - family-names: "Akopyan"
+    given-names: "Arseniy"
+abstract: >-
+  Lean formalization of a convex-body strengthening/variant of Pablo Soberón's
+  2026 four-hyperplane mass-partition counterexample in R^4. The obstructed mass
+  is uniform Lebesgue volume on a convex body with nonempty interior.
+license: Apache-2.0
+references:
+  - type: article
+    title: "Four hyperplanes do not always equipartition a mass in R^4"
+    authors:
+      - family-names: "Soberón"
+        given-names: "Pablo"
+    year: 2026
+    url: "https://arxiv.org/abs/2608.23312"

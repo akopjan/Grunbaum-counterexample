@@ -1,0 +1,31 @@
+# Lean / Lake build artifacts
+.lake/
+lake-packages/
+
+# Lean compiled outputs
+*.olean
+*.ilean
+*.c
+*.o
+
+# Logs
+*.log
+validation/*.log
+
+# OS and Editor artifacts
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+*~
+*.swp
+.vscode/.lake/
+
+# Temporary directories and cache
+scratch/
+__pycache__/
+*.pyc
+*.zip

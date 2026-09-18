@@ -1,0 +1,146 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/mathlib-initiative/formalization.yaml/main/schema/formalization.schema.json
+version: "v0.4"
+
+project:
+  name: "A convex body variant of Soberon's counterexample to the Grünbaum conjecture."
+  description: >-
+    A Lean formalization of a geometric strengthening/variant of Pablo
+    Soberón's four-hyperplane mass-partition counterexample in dimension four.
+    The formalized result constructs a convex body K in R^4 with nonempty
+    interior such that no four affine hyperplanes divide K into sixteen sign
+    cells of equal four-dimensional volume.  Equivalently, the obstructed mass
+    can be chosen to be uniform Lebesgue volume on a convex body.  The proof
+    adapts Soberón's explicit cubic/quartic tensor obstruction and replaces the
+    smooth positive density used in the source by a small Wulff-body
+    perturbation of the Euclidean ball.
+  authors:
+    - "Arseniy Akopyan"
+  license: "Apache-2.0"
+  responsible_maintainers:
+    - "Arseniy Akopyan"
+
+classification:
+  arxiv: ["math.CO"]
+  msc2020: ["52C35", "52A37"]
+
+sources:
+  - title: "Four hyperplanes do not always equipartition a mass in R^4"
+    authors:
+      - "Pablo Soberón"
+    id: "arXiv:2608.23312v2"
+    type: "paper"
+    location: "Theorems 1 and 2; Sections 2 and 3"
+    relationship: "adapts"
+    note: >-
+      The formalization uses Soberón's explicit cubic and quartic tensor
+      obstruction and the perturbative Walsh/Fourier architecture.  The
+      advertised theorem is a geometric strengthening in a different
+      regularity direction: instead of an arbitrary mass represented by the
+      source's smooth strictly positive density, the mass is Lebesgue volume
+      restricted to a convex body with nonempty interior.  The formalization
+      does not claim that this convex-body density is smooth or strictly
+      positive on all of R^4.
+    author_endorsement: "not-contacted"
+
+related_formalizations: []
+
+status:
+  scope: >-
+    The project formalizes the convex-body consequence using the Wulff body
+    supportBody tau eps, the sixteen literal sign cells, the Walsh transform,
+    the explicit Soberón tensor obstruction, localization near centered
+    orthonormal frames, and quadratic stability estimates.  The main
+    statement removes the internal unit-normal parametrization: zero normals
+    give an empty cell, while nonzero normals are normalized by positive
+    rescaling.  Challenge.lean intentionally contains the single statement
+    sorry and is excluded from the counts below.
+  sorry_count: 0
+  sorry_in_definitions: 0
+  axioms: ["propext", "Quot.sound", "Classical.choice"]
+
+  main_results:
+    - declaration: "SoberonConvexBody.grunbaum_counterexample"
+      file: "Solution.lean"
+      sorry_count: 0
+      axioms: ["propext", "Quot.sound", "Classical.choice"]
+      comparator_config: "comparator.json"
+
+automation:
+  methods:
+    - method: "agent"
+      models: ["OpenAI GPT-5.6 Sol"]
+      framework: "ChatGPT"
+      tool_setup: >-
+        Arseniy Akopyan directed the mathematical target, reviewed statement
+        choices, and requested the convex-body strengthening.  ChatGPT assisted
+        substantially with proof decomposition, Lean source drafting, static
+        source auditing, and symbolic regression checks.
+      cost:
+        wall_time: "not tracked"
+        spend_usd: "subscription-based / not tracked"
+        hardware: "OpenAI-hosted environment; no Lean executable available during final preparation"
+      prompting_notes: >-
+        The interaction iteratively refined Soberón's tensor obstruction into
+        a convex Wulff-body construction and then added a literal statement
+        quantifying over arbitrary affine linear inequalities.
+    - method: "manual"
+      models: []
+      framework: "n/a"
+      tool_setup: "Human mathematical direction and statement review by Arseniy Akopyan."
+      cost:
+        wall_time: "not tracked"
+        spend_usd: "not tracked"
+        hardware: "not tracked"
+      prompting_notes: "n/a"
+  spend_usd: "not tracked"
+  notes: >-
+    Prepared by Arseniy Akopyan with substantial assistance from ChatGPT.
+    Automated assistance is disclosed as tooling rather than bibliographic
+    authorship.  The mathematical source and tensor construction are credited
+    to Pablo Soberón.
+
+fidelity:
+  divergences: >-
+    The cited paper proves existence of a smooth strictly positive density on
+    R^4 with no four-hyperplane equipartition.  This project instead proves an
+    existence result for uniform volume on a convex body with nonempty
+    interior.  This is a more geometrically specialized counterexample but it
+    does not preserve the source's smooth-positive-density property.  The
+    proof uses the same explicit tensor obstruction but a Wulff-body/radial
+    comparison in place of the source's Gaussian-density perturbation.
+
+review:
+  status: "self-assessed"
+  notes: >-
+    The statement and provenance were manually reviewed during preparation.
+    Source-level scans report no sorry/axiom/admit in the proof-development
+    modules, excluding the deliberate Challenge.lean sorry.
+
+alignment:
+  namespace: "SoberonConvexBody"
+  statements:
+    - source: "Pablo Soberón, arXiv:2608.23312v2, Theorem 2"
+      lean: "SoberonConvexBody.Tensors.exists_tau_obstruction_nonzero"
+      module: "SoberonConvexBody.Tensors"
+      status: "adapted"
+      note: "Formalizes the explicit cubic/quartic tensor nonvanishing input."
+    - source: "Convex-body consequence adapted from Soberón's Theorem 1 and perturbation method"
+      lean: "SoberonConvexBody.exists_convex_body_counterexample"
+      module: "SoberonConvexBody.Main"
+      status: "adapted"
+      note: >-
+        Replaces the Gaussian-density perturbation by uniform volume on a
+        Wulff convex body while preserving the tensor obstruction strategy.
+    - source: "Literal arbitrary-normal statement of the convex-body consequence"
+      lean: "SoberonConvexBody.grunbaum_counterexample"
+      module: "Solution"
+      status: "proved"
+      note: >-
+        Zero normals yield an empty sign cell;
+        nonzero normals are positively rescaled to unit length.
+
+acknowledgements: >-
+  Based on Pablo Soberón's 2026 counterexample and explicit tensor
+  construction.  Formalization prepared by Arseniy Akopyan with substantial
+  assistance from ChatGPT (OpenAI).  The development relies on Lean 4 and
+  Mathlib.

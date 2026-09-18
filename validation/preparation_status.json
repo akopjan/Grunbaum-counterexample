@@ -1,0 +1,18 @@
+{
+  "preparation_only": true,
+  "lean_available": false,
+  "lake_available": false,
+  "kernel_checked_here": false,
+  "comparator_checked_here": false,
+  "nanoda_checked_here": false,
+  "proof_development_explicit_gaps": {
+    "sorry": 0,
+    "axiom": 0,
+    "admit": 0
+  },
+  "challenge_deliberate_sorry_count": 1,
+  "metadata_yaml_parses": true,
+  "comparator_json_parses": true,
+  "lake_manifest_json_parses": true,
+  "note": "Run lake build and scripts/verify.sh."
+}
