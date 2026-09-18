@@ -3,7 +3,7 @@
 Lean 4 formalization of a strengthening of Pablo Soberón's counterexample to the Grünbaum conjecture.
 
 The project proves a geometric strengthening/variant of Pablo Soberón's 2026 four-hyperplane mass-partition counterexample: There exists a convex body
-`K ⊂ R^4` with nonempty interior such that no four affine hyperplanes divide
+`K ⊂ ℝ⁴` with nonempty interior such that no four affine hyperplanes divide
 `K` into sixteen sign cells of equal four-dimensional volume.
 
 Equivalently, the obstructed mass can be chosen to be **uniform Lebesgue volume
